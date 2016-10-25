@@ -1,0 +1,28 @@
+{
+  "name": "hv-wallet",
+  "description": "Web component to mimic iOS wallet",
+  "main": [
+      "dist/hvWallet.js",
+      "hvWallet.css"
+  ],
+  "authors": [
+    "Stephen K"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "wallet",
+    "css"
+  ],
+  "homepage": "https://github.com/zero298/hvWallet",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

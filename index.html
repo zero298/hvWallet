@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wallet Index</title>
+    <style>
+        html,
+        body,
+        main {
+            height: 100%;
+        }
+        
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+        
+        h1,
+        h2 {
+            margin: 0.5em;
+            text-align: center;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        ul.hv-wallet {
+            margin: 0;
+        }
+        
+        ul > li.hv-wallet-card {
+            max-width: 400px;
+        }
+        
+        ul > li.hv-wallet-card.red {
+            color: #FFFFFF;
+            background-color: #eb0e0e;
+        }
+        
+        ul > li.hv-wallet-card.blue {
+            color: #FFFFFF;
+            background-color: #0808be;
+        }
+        
+        ul > li.hv-wallet-card.green {
+            color: #FFFFFF;
+            background-color: #009d00;
+        }
+        
+        ul > li.hv-wallet-card.striped {
+            background-image: repeating-linear-gradient(-45deg, #FFFFFF, #FFFFFF 30px, #DDDDDD 30px, #DDDDDD 60px);
+        }
+        
+        ul > li.hv-wallet-card.yellow {
+            background-color: #ffee23;
+        }
+        
+        ul > li.hv-wallet-card.lightblue {
+            background-color: #add8e6;
+        }
+    </style>
+    <link rel="stylesheet" href="hvWallet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="dist/hvWallet.js"></script>
+    <script>
+        angular.module("hvTest", ["hvWallet"]);
+    </script>
+</head>
+
+<body>
+    <main ng-app="hvTest" ng-strict-di="true">
+        <h1>Wallet Test</h1>
+        <ul hv-wallet="">
+            <li hv-wallet-card="">
+                <h2>Lorem</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique diam imperdiet feugiat ultricies. Quisque vulputate odio et faucibus aliquet. Donec bibendum vel nunc vel lacinia. Quisque sed vestibulum justo. Ut id dolor ullamcorper, viverra nulla in, dignissim massa. Nulla molestie velit turpis, volutpat porttitor nisi lobortis at. Sed cursus aliquet dui, ut finibus ex rutrum ac. Nam eu dui fringilla, posuere lorem ut, condimentum nulla. Duis venenatis cursus mollis. Mauris lobortis est lectus, non sagittis orci fringilla id. Aenean aliquam sapien vel iaculis facilisis. Suspendisse tristique odio massa. Integer enim ligula, rutrum nec facilisis vel, scelerisque non nisl. Duis quam enim, placerat ac volutpat at, venenatis ut nibh.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Ipsum</h2>
+                <p>Sed cursus sem quis metus scelerisque posuere. Aliquam eget tristique leo, quis feugiat lectus. Quisque pulvinar dignissim accumsan. Aliquam erat volutpat. Pellentesque malesuada rutrum porta. Aliquam fringilla arcu eget gravida accumsan. Ut maximus consectetur commodo. Duis ornare pellentesque condimentum.</p>
+            </li>
+            <li class="red" hv-wallet-card="">
+                <h2>Dolor</h2>
+                <p>Vivamus sollicitudin fringilla massa sed lobortis. Duis ac hendrerit nisl. Nullam sit amet tortor porttitor purus auctor bibendum. Etiam a volutpat nunc. Pellentesque mollis semper venenatis. Vestibulum vehicula mi erat, ut scelerisque ante facilisis et. Quisque sed felis ac metus molestie lacinia et vitae orci. Pellentesque interdum urna id dui tincidunt, ac convallis risus vehicula. Praesent malesuada pretium viverra. Integer posuere eros ac quam dapibus aliquam. Fusce dapibus eu risus fringilla sodales. Donec vel lobortis nisi. Duis lobortis, nisl a suscipit iaculis, eros mi ornare tellus, vitae dapibus lectus ligula sit amet orci.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Sit</h2>
+                <p>Sed est leo, interdum vel enim in, tincidunt eleifend justo. Aenean quis nulla porta, interdum elit lacinia, lobortis metus. Phasellus ac tempus felis. Ut cursus tortor dui, in pellentesque sapien lacinia vitae. Proin magna sapien, luctus at lorem eget, efficitur condimentum velit. Pellentesque ultricies velit in libero feugiat, a condimentum est iaculis. Aliquam ornare pretium sem, a ullamcorper est lobortis ut. In in tellus euismod sem volutpat sagittis a ac nibh. Nulla facilisi. In eu ex massa. Fusce quis orci id nisi efficitur tristique. Etiam gravida cursus odio, in malesuada enim sodales sed. Vivamus eu nibh finibus, sollicitudin lectus et, congue elit. Vestibulum mollis pellentesque lacus faucibus vulputate. Praesent vel nunc vel nibh maximus faucibus eget ut leo.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Amet</h2>
+                <p>Ut id libero lorem. Ut sodales sagittis sem ac aliquet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at tempor lacus, et bibendum metus. Donec euismod scelerisque nunc, id tempus risus. Aliquam luctus congue velit, lacinia elementum risus porta ac. Fusce mattis augue porttitor accumsan tincidunt. Nullam congue nisl tempor gravida feugiat. Sed urna tellus, elementum ut purus nec, ullamcorper convallis purus. Integer sit amet tortor in neque mattis pellentesque.</p>
+            </li>
+            <li class="blue" hv-wallet-card="">
+                <h2>Consectetur</h2>
+                <p>Morbi non felis eget magna suscipit tempus in sed metus. Nam at pulvinar mi, in efficitur enim. Morbi a sagittis diam, in eleifend nisl. Praesent quis nisi ac velit convallis ultricies. Vivamus placerat turpis quis felis tincidunt, eu vulputate nisi ultrices. Duis convallis lacus turpis, id dignissim odio scelerisque vitae. Etiam bibendum semper urna molestie accumsan. Nam vulputate mattis tellus, non luctus libero ultricies quis. Duis viverra, metus et sollicitudin sodales, dui nunc tempor metus, eu imperdiet magna mi ut sem. Vivamus efficitur velit in scelerisque imperdiet. Phasellus auctor mattis leo, at hendrerit neque convallis nec. Sed nec dignissim lacus. Maecenas vehicula ligula ut erat vulputate commodo. Mauris id libero augue. Proin suscipit volutpat quam vitae auctor. Nam viverra urna quis quam laoreet, in varius neque ullamcorper.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Adipiscing</h2>
+                <p>Donec lectus mauris, ullamcorper a nulla quis, porta venenatis turpis. Sed purus tortor, euismod in accumsan quis, finibus at neque. In maximus justo nec elit accumsan cursus at tempus urna. Vivamus commodo cursus ante. Praesent interdum purus nisi. Maecenas volutpat ligula volutpat, rutrum lacus id, pretium erat. Suspendisse sit amet urna tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Elit</h2>
+                <p>Aenean vitae molestie sapien. Pellentesque nisl metus, aliquam ac nisi eu, fermentum vulputate magna. Aliquam et diam lectus. Pellentesque vitae lacus rutrum, condimentum lorem ac, viverra nisi. Vestibulum vitae fermentum lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eleifend turpis in egestas bibendum. Sed laoreet ipsum sed diam sagittis semper. Sed aliquet, dolor convallis semper convallis, turpis nunc tristique ex, at dapibus velit felis vel mauris. Ut arcu velit, sagittis ac dapibus sit amet, laoreet a nulla. Vestibulum auctor rutrum leo, vel ultricies nibh condimentum ut. Aliquam lacus ex, mattis ac ornare ac, congue id sapien. Nunc interdum nunc at nunc volutpat, sit amet accumsan magna efficitur. Aenean non nunc ultrices, tempus eros eleifend, vehicula erat.</p>
+            </li>
+            <li class="green" hv-wallet-card="">
+                <h2>Nam</h2>
+                <p>Integer egestas libero sem, eu commodo nisi molestie eu. Sed vitae blandit enim, consectetur consequat urna. Nulla vitae egestas nulla. Sed rhoncus metus vel sem faucibus feugiat. Curabitur commodo tristique volutpat. Donec ut arcu sodales, scelerisque ipsum at, sollicitudin libero. Vestibulum ut mauris sit amet quam suscipit sodales. Mauris interdum elit mattis, varius nibh ac, ullamcorper eros. Sed consectetur nisi justo, non consequat ex sollicitudin ac. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras non porta odio. Nulla volutpat commodo arcu, ac cursus sem pharetra a.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Tristique</h2>
+                <p>Quisque in enim in mi commodo blandit. Morbi ut elementum urna. Aenean ut eros sit amet nisl molestie commodo eu hendrerit ligula. Integer auctor vehicula blandit. Sed rhoncus, sapien placerat sodales facilisis, urna ex malesuada magna, nec consectetur nisl nunc vitae diam. Vestibulum sollicitudin eu est sit amet volutpat. Suspendisse at odio pulvinar, mattis est ac, elementum lacus. Phasellus finibus, mauris a feugiat porta, sem elit faucibus ante, non finibus arcu felis at libero. Nunc tincidunt mauris sed tellus convallis porttitor. Mauris sollicitudin lacus urna, sit amet mattis sem luctus eget. Nam ipsum nulla, molestie a nisl sit amet, interdum dignissim neque. Vivamus facilisis aliquam odio a tincidunt. Pellentesque non congue metus. In sit amet egestas mauris. Morbi non suscipit neque.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Diam</h2>
+                <p>Quisque eu volutpat nulla, quis scelerisque leo. Mauris convallis felis ex, malesuada tristique odio malesuada nec. Suspendisse vel diam venenatis, finibus ligula eu, semper quam. Nam ornare, leo a tincidunt varius, leo enim vehicula lorem, vitae ultrices quam dolor et nunc. Integer sodales leo tortor, id condimentum lectus feugiat ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse fermentum arcu vitae ullamcorper maximus. Nam ac odio sed lorem dictum ultricies in in arcu. Quisque id lobortis odio, ut elementum eros. Cras egestas tortor et leo pellentesque, nec ultrices ex hendrerit. Proin auctor dolor ut sem bibendum, nec aliquet neque mattis. Suspendisse enim quam, placerat sed ipsum a, euismod interdum dui. Integer consequat nisi et congue rutrum.</p>
+            </li>
+            <li class="striped" hv-wallet-card="">
+                <h2>Imperdiet</h2>
+                <p>Phasellus turpis felis, ornare fermentum mauris vitae, dignissim consequat purus. Sed a ligula id turpis facilisis imperdiet. Aenean at imperdiet neque. Nunc mollis lorem odio, sollicitudin eleifend lacus dapibus eget. Suspendisse in laoreet lectus. Cras venenatis egestas iaculis. Duis condimentum, diam ut rhoncus vestibulum, tellus quam sodales ex, vel fermentum odio nisi sed enim.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Feugiat</h2>
+                <p>Proin eleifend malesuada laoreet. Aenean rutrum sollicitudin ante quis tristique. Quisque vehicula rhoncus quam. Pellentesque viverra fringilla quam, imperdiet congue sapien commodo sit amet. Ut volutpat bibendum metus sed lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vehicula ligula quis condimentum dignissim. Nullam luctus nibh vitae est semper, sit amet tempor tellus tempus. Nam nec pellentesque nisi. Sed in sapien egestas, rutrum nunc sit amet, bibendum urna.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Ultricies</h2>
+                <p>Morbi vel justo sit amet quam commodo mollis a sit amet libero. Duis tempus eget nulla feugiat eleifend. Integer euismod rhoncus lacus, vel vestibulum ante finibus eu. Nulla ligula nibh, malesuada non libero vitae, dignissim blandit ipsum. Quisque eu ipsum ut elit varius convallis in dictum turpis. Nam blandit elementum tortor a pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eget sagittis lorem. Nunc luctus faucibus metus, ut posuere eros vehicula quis. Phasellus nec tincidunt turpis. Pellentesque venenatis enim nec nibh pulvinar, eget pharetra elit porta. Nunc congue dolor nec augue elementum, a fermentum diam semper. Quisque ut tincidunt augue, vel pretium est. Maecenas ultrices enim et tellus sollicitudin interdum. Maecenas dignissim ut magna eget dapibus.</p>
+            </li>
+            <li class="yellow" hv-wallet-card="">
+                <h2>Quisque</h2>
+                <p>Mauris mattis semper risus a auctor. Suspendisse potenti. In convallis nisl ligula, at convallis urna laoreet eget. Proin rhoncus lectus eu orci pharetra fermentum ut nec eros. Aenean sodales convallis dui, a venenatis arcu hendrerit vel. Aliquam in odio eu arcu imperdiet molestie ac vel est. Ut vitae magna eleifend, tincidunt elit tincidunt, suscipit erat. Donec mattis ullamcorper dapibus. Fusce tincidunt nisi a ipsum volutpat, ut pretium mi lobortis. Pellentesque nunc purus, tincidunt et auctor in, posuere nec enim. Integer quis vulputate dui, vel euismod lorem. Donec accumsan justo nec ligula vestibulum convallis. Praesent accumsan volutpat mollis.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Vulputate</h2>
+                <p>Maecenas in dapibus odio. Pellentesque luctus quam iaculis, sagittis dui fermentum, finibus quam. Donec ac felis eu purus ornare porttitor non ac lorem. Cras ornare a nisl ut tincidunt. Vivamus ultrices tellus et diam varius lacinia. Etiam blandit ornare velit ut porta. Cras magna augue, mollis a dapibus a, cursus et enim. Nunc eleifend magna ipsum, sed placerat urna congue eu. Duis bibendum semper tortor vitae mattis. Sed efficitur ut nibh ut sagittis. Fusce eu semper neque, id pretium diam. Sed et ex ligula. Praesent facilisis pretium ipsum, placerat lacinia orci ultrices vestibulum. Nunc ac congue lectus. Phasellus euismod neque sed libero auctor, non sodales dolor tempor.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Odio</h2>
+                <p>Quisque in lorem ut justo consequat finibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent eget felis rutrum, scelerisque augue et, gravida sem. Morbi luctus viverra molestie. Pellentesque sed neque a arcu accumsan ornare vitae eget dolor. Curabitur faucibus ipsum nibh, eu bibendum ex posuere sit amet. Nunc pharetra luctus risus, quis tempor enim aliquet sed. Sed gravida tellus arcu, vitae scelerisque turpis commodo eu. Vestibulum tincidunt purus tincidunt, elementum eros a, tincidunt elit. Etiam laoreet arcu nulla, et facilisis nulla facilisis ut. Pellentesque vehicula arcu et dignissim finibus.</p>
+            </li>
+            <li class="lightblue" hv-wallet-card="">
+                <h2>Faucibus</h2>
+                <p>Praesent nec neque viverra, mollis leo quis, aliquam est. Vestibulum posuere, mauris eget porta finibus, enim nunc dapibus nisi, et ultricies augue sapien non odio. Etiam elementum, mi ut luctus vulputate, quam erat euismod tortor, vitae interdum neque elit nec neque. Maecenas luctus placerat lacinia. Donec volutpat in turpis eget posuere. Aliquam in augue feugiat, malesuada ligula nec, sagittis dui. In pulvinar euismod scelerisque. Ut eu mi et turpis elementum egestas. Integer ac molestie justo. Integer eu massa nec tortor semper hendrerit et id mauris. Proin hendrerit convallis sapien, sit amet sollicitudin magna mollis vel. Praesent non nunc eget neque aliquam consectetur id et neque. Nullam blandit aliquam dui, vel bibendum orci pulvinar id. Cras ultrices aliquam lacus, vel posuere urna aliquet ac. Curabitur vestibulum blandit leo et varius.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Aliquet</h2>
+                <p>Suspendisse interdum volutpat lorem, vitae blandit dolor rhoncus non. Nulla ex tellus, eleifend ac nisl vitae, aliquam lacinia massa. Ut tempor turpis ac imperdiet eleifend. Donec nibh est, fringilla eu fermentum a, dignissim sollicitudin neque. Maecenas eget lacus id quam pretium convallis ut ac est. Ut sed aliquam eros, sit amet fermentum nisl. Donec molestie mollis tincidunt.</p>
+            </li>
+            <li hv-wallet-card="">
+                <h2>Donec</h2>
+                <p>Morbi sollicitudin dolor mi, et feugiat orci tristique id. Proin posuere imperdiet turpis, molestie mattis erat ullamcorper non. Sed tincidunt lacus risus, vel tincidunt orci viverra id. Vivamus elementum gravida quam sit amet egestas. Ut hendrerit risus est, vel vestibulum ligula dignissim nec. Aliquam porttitor ante sed volutpat imperdiet. Maecenas luctus finibus lectus, eget eleifend dui blandit non. Duis semper eu libero maximus gravida. Donec eu ullamcorper arcu, nec dictum libero.</p>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
