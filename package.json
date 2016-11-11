@@ -4,10 +4,11 @@
   "description": "Web component to mimic iOS wallet",
   "main": "index.js",
   "scripts": {
-    "start": "http-server .",
+    "start": "node scripts/start",
+    "build": "node scripts/build",
+    "watch": "node scripts/watch",
     "lint": "jslint private/src/**/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "uglifyjs src/hvWallet.module.js src/hvWallet.controller.js src/hvWallet.directive.js src/hvWalletCard.directive.js -o dist/hvWallet.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "wallet",
@@ -24,8 +25,12 @@
   },
   "homepage": "https://zero298.github.io/hvWallet/",
   "devDependencies": {
+    "chokidar": "^1.6.1",
+    "fs-promise": "github:zero298/fs-promise",
     "http-server": "^0.9.0",
     "jslint": "^0.10.3",
+    "node-static": "^0.7.9",
     "uglifyjs": "^2.4.10"
-  }
+  },
+  "dependencies": {}
 }
