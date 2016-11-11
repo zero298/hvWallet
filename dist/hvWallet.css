@@ -18,6 +18,7 @@
     margin: 0 auto;
     left: 1em;
     right: 1em;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .hv-wallet-card.expanded {
