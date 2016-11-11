@@ -3,7 +3,7 @@
   "description": "Web component to mimic iOS wallet",
   "main": [
       "dist/hvWallet.js",
-      "hvWallet.css"
+      "dist/hvWallet.css"
   ],
   "authors": [
     "Stephen K"

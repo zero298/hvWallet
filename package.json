@@ -1,9 +1,10 @@
 {
   "name": "hv-wallet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Web component to mimic iOS wallet",
   "main": "index.js",
   "scripts": {
+    "start": "http-server .",
     "lint": "jslint private/src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "uglifyjs src/hvWallet.module.js src/hvWallet.controller.js src/hvWallet.directive.js src/hvWalletCard.directive.js -o dist/hvWallet.js"
@@ -14,13 +15,6 @@
   ],
   "author": "Stephen K",
   "license": "MIT",
-  "devDependencies": {
-    "express": "^4.14.0"
-  },
-  "dependencies": {
-    "compression": "^1.6.2",
-    "pug": "^2.0.0-beta6"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zero298/hvWallet.git"
@@ -28,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/zero298/hvWallet/issues"
   },
-  "homepage": "https://github.com/zero298/hvWallet#readme"
+  "homepage": "https://zero298.github.io/hvWallet/",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jslint": "^0.10.3",
+    "uglifyjs": "^2.4.10"
+  }
 }
