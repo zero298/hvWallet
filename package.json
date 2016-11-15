@@ -25,8 +25,8 @@
   },
   "homepage": "https://zero298.github.io/hvWallet/",
   "devDependencies": {
+    "@zero298/fs-promise": "0.0.1",
     "chokidar": "^1.6.1",
-    "fs-promise": "github:zero298/fs-promise",
     "http-server": "^0.9.0",
     "jslint": "^0.10.3",
     "node-static": "^0.7.9",

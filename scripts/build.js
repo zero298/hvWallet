@@ -3,7 +3,7 @@
 
 "use strict";
 
-var fsPromise = require("fs-promise"),
+var fsPromise = require("@zero298/fs-promise"),
     fs = require("fs"),
     UglifyJS = require("uglifyjs");
 
@@ -19,24 +19,19 @@ var inStyleFiles = [
 ];
 
 var outScriptFile = "dist/hvWallet.js";
+var outScriptMapFile = "dist/hvWallet.map.js";
 var outStyleFile = "dist/hvWallet.css";
 
 function buildJavaScript(input, output) {
-    Promise.all(input.map(function (file) {
-        return fsPromise.readFile(file, "utf8");
-    })).then(function (fileSources) {
-        return fileSources.reduce(function (prev, curr, idx, arr) {
-            if (prev) {
-                return UglifyJS.parse(curr, {
-                    toplevel: prev
-                });
-            } else {
-                return UglifyJS.parse(curr);
-            }
-        }, null);
-    }).then(function (ast) {
-        return fsPromise.writeFile(output, ast.print_to_string());
+    var result = UglifyJS.minify(inScriptFiles, {
+        outSourceMap: "/dist/hvWallet.map.js",
+        sourceRoot: "/"
     });
+
+    return Promise.all([
+        fsPromise.writeFile(outScriptFile, result.code),
+        fsPromise.writeFile(outScriptMapFile, result.map)
+    ]);
 }
 
 function buildCSS(input, output) {
